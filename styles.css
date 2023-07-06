@@ -3,6 +3,143 @@ body {
   text-align: center;
 }
 
+/*--Ejercicios con Áreas*/
+
+#website-areas * {
+  margin: 0px;
+  padding: 0px;
+}
+
+#website-areas {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 150px 70px 1fr 70px;
+  grid-template-areas:
+    "cabecera cabecera cabecera cabecera cabecera"
+    "menu menu menu menu menu"
+    "lateral contenido contenido contenido contenido "
+    "lateral pie pie pie pie ";
+  width: 75%;
+  height: 1000px;
+  margin: 0px auto;
+  border: 1px solid #ccc;
+}
+
+#website-areas #cabecera {
+  grid-area: cabecera;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: blue;
+  color: white;
+}
+
+#website-areas #menu {
+  grid-area: menu;
+  background: lightblue;
+  color: black;
+}
+
+#website-areas #menu ul {
+  line-height: 70px;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  list-style: none;
+}
+
+#website-areas #contenido {
+  grid-area: contenido;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px;
+  padding: 20px;
+  background: #eee;
+}
+
+#website-areas #contenido article {
+  background: #ccc;
+  border: 1px solid #555;
+}
+
+#website-areas #lateral {
+  grid-area: lateral;
+  background: orange;
+  color: white;
+}
+
+#website-areas #pie-pagina {
+  grid-area: pie;
+  background: black;
+  color: white;
+}
+
+/*--Ejercicio completo de maquetación utilizando GRID*/
+#website * {
+  margin: 0px;
+  padding: 0px;
+}
+
+#website {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 150px 70px 1fr 70px;
+  width: 75%;
+  height: 1000px;
+  margin: 0px auto;
+  border: 1px solid #ccc;
+}
+
+#website #cabecera {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1 / 6;
+  background: blue;
+  color: white;
+}
+
+#website #menu {
+  grid-column: 1 / 6;
+  background: lightblue;
+  color: black;
+}
+
+#website #menu ul {
+  line-height: 70px;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  list-style: none;
+}
+
+#website #contenido {
+  grid-column: 1 / 5;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px;
+  padding: 20px;
+  background: #eee;
+}
+
+#website #contenido article {
+  background: #ccc;
+  border: 1px solid #555;
+}
+
+#website #lateral {
+  grid-column: 5 / 6;
+  background: orange;
+  color: white;
+}
+
+#website #pie-pagina {
+  grid-column: 1 / 6;
+  background: black;
+  color: white;
+}
+
+/*--CSS de la parte de la clase anterior o bien la parte del abajo de la pagina web--*/
+
 .layout {
   width: 80%;
   height: 600px;
